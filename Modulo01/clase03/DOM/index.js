@@ -74,14 +74,9 @@ var contenido=document.getElementById('contenido');
 validar.addEventListener("click",validarDatos)
 
 function validarDatos(){
+
 	var user_=inp_user.value;
 	var pass_=inp_password.value;
-
-	console.log(user_);
-	user_.trim();
-
-	console.log(pass_);
-	
 
 	if(user_.trim()!="" && pass_!=""){
 			if(user_.trim()=="Admin" && pass_=="123***"){
@@ -98,20 +93,41 @@ function validarDatos(){
 
 	}
 	else{
-		if(user_.trim()==""){
-		error_user.innerHTML="<strong class='error'>Dato requerido</strong>"
-		}
-		else{
-			error_user.innerHTML="";
-		}
+
+		validarCampo(pass_,error_password);
+		validarCampo(user_,error_user);
 		
-		if(pass_.trim()==""){
-			error_password.innerHTML="<strong class='error'>Dato requerido</strong>";
-		}
-		else{
-			error_password.innerHTML="";
-		}
 
 	}
 
 }
+
+
+inp_user.addEventListener("keyup",actualizar)
+
+function actualizar(){	
+	validarCampo(inp_user.value,error_user)
+}
+
+/*
+function validarUsuario(value){
+	if(value==""){
+		error_user.innerHTML="<strong class='error'>Dato requerido</strong>"
+	}
+	else{
+		error_user.innerHTML="";
+	}
+
+}*/
+
+//validarCampo("",inp_password);
+
+function validarCampo(valor,error){
+	if(valor.trim()==""){
+		error.innerHTML="<strong>Campo Requerido</strong>"
+	}
+	else{
+		error.innerHTML="";
+	}
+}
+
