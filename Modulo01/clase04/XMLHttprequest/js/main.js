@@ -23,7 +23,7 @@ function hacerPeticion(){
 
 		
 		var resultado=JSON.parse(xhr.responseText);
-		console.log(resultado);
+	
 		let temporal='';
 		for(let item of resultado)
 		{
