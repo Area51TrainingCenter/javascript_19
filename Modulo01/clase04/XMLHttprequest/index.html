@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		.modal-bloque{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+		}
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="modal2" class="modal-bloque hide"></div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mt-4 mb-4">
+				<span id="obtener" class="h2">Obtener Listado de usuarios</span><button id="cargarUsuarios" class="btn btn-info float-right">Cargar Usuarios</button>
+			</div>
+			<div class="col-12">
+				<div id="listado" class="row">
+		
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/data.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
