@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+		var data=new FormData();
+		data.set("usuario","admin")
+		data.set("password","123");
+		
+		var parametros={
+			method:"POST",
+			body:data
+		}
+		fetch('http://192.168.2.44/api/login.php',parametros)
+		.then((data)=>{return data.json()})
+		.then((data)=>{ 
+			console.log(data)
+
+		})
+		.catch((error)=>{
+			console.log(error);
+		})
+
+
+
+
+
+
+
+/*
+
+var promesa1=new Promise((resolve,reject)=>{
+	// resolve(promesa)
+})
+.then((data)=>{
+	return console.log(data)//promesa
+})
+.then((data)=>{console.log()})
+*/
+
+
+
+
+
+
+
+
+
+
+</script>
