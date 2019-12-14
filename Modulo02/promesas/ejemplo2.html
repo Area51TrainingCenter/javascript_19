@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+
+	var promesa1=new Promise((resolve,reject)=>{
+		xhr=new XMLHttpRequest()
+		url="http://192.168.2.44/api/login.php";
+
+		xhr.open("POST",url);
+		var data=new FormData();
+		data.set("usuario","admin");
+		data.set("password","123");
+		xhr.send(data);
+
+		xhr.onreadystatechange=function(){
+	
+			if(xhr.readyState==4){
+				var resultado=JSON.parse(xhr.responseText);
+			
+				if(resultado.estado==true){
+					resolve(resultado.mensaje)
+				}
+				else{
+					reject(resultado.mensaje)	
+				}
+			}
+		}
+	})
+	.then((data)=>{
+		console.log(data);
+		console.log("Respuesta correcta")
+	})
+	.catch((data)=>{
+		console.log(data);
+		console.log("hubo un error en la petacion")
+	})
+
+
+
+
+	var promesa2=new Promise((resolve,reject)=>{
+		setTimeout(function(){
+			reject("soy la promesa 2");
+		},5000)
+	})
+	.then((data)=>{
+		console.log(data)
+	})
+	.catch((error)=>{
+		console.log(error)
+	})
+
+
+	var promesa3=new Promise((resolve,reject)=>{
+		setTimeout(function(){
+			resolve();
+		},8000)
+	})
+	.then(()=>{
+
+	})
+	.catch((data)=>{
+		console.log()
+
+	})
+
+	Promise.all([promesa1,promesa2,promesa3])
+	.then(()=>{
+		console.log("Se ejecutaron las 2 promesa")
+	})
+	.catch((data)=>{
+		console.log("Hubo un error")
+	})
+
+	</script>
+</body>
+</html>
