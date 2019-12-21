@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<div class="container container-login bg-blue">
+		<form class="form form-login" id="formulario-login">
+			<span class="title-form">LOGIN</span>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Usuario" name="usuario">
+			</div>
+
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="Password" name="password">
+			</div>
+
+			<button id="btn_login" class="btn" type="button">LOGIN</button>
+		</form>
+		<div id="error" class="texto-error">
+			<p>Los datos ingresados son incorrectos</p>
+		</div>
+	</div>
+	<script src="js/funciones.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

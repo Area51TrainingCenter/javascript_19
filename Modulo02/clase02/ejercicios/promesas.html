@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.btn{
+			display: inline-block;
+			margin: 20px;
+			padding: 10px 20px;
+			background-color: black;
+			color: white;
+			font-family: arial;
+		}
+	</style>
+</head>
+<body>
+	
+<h1>Probando las promesas</h1>
+<span id="btn_consultar" class="btn">Consultar por usuarios</span>
+<script>
+var btn=document.getElementById('btn_consultar');
+btn.addEventListener("click",()=>{
+	var url1="https://jsonstorage.net/api/items/fa3a020c-bc6b-4e90-810d-583fb186571e";
+
+	var url2="https://jsonplaceholder.typicode.com/posts";
+	/*
+	
+
+	let promesa1=new Promise((resolve,reject)=>{
+		fetch(url1)
+		.then((data)=>{return data.json()})
+		.then((data)=>{
+			resolve(data)
+				/*
+			console.log(data)
+			console.log("estoy en el 2do")
+			*/
+		/*});
+	})
+	.then((data)=>{
+	
+		console.log("estoy en el then 1 y aqui tengo su informacion")
+		console.log(data);
+	})
+
+	let promesa2=new Promise((resolve,reject)=>{
+		fetch(url2)
+		.then((data)=>{return data.json()})
+		.then((data)=>{
+			/*
+			console.log(data)
+			console.log("estoy en el 2do")
+			*/
+			/*resolve(data)
+		
+		});
+	})
+	.then((data)=>{
+		console.log("estoy en el then 2 y aqui tengo su informacion")
+		console.log(data);
+	})
+	*/
+
+	var promesa1=new Promise((resolve,reject)=>{
+		/* 
+		resolve() -> then
+		reject()  -> catch
+		*/
+		fetch(url1)
+		.then((data)=>{return data.json()})
+		.then((data)=>{
+				// respuesta de tu then en la variable data
+				var respuesta={
+					estado:"soy la primera",
+					resultad:data
+				}		
+				console.log(respuesta)
+				resolve(respuesta)
+		})
+	})
+
+
+	var promesa2=new Promise((resolve,reject)=>{
+		/* 
+		resolve() -> then
+		reject()  -> catch
+		*/
+		fetch(url2)
+		.then((data)=>{return data.json()})
+		.then((data)=>{
+				// respuesta de tu then en la variable data
+				var respuesta={
+					estado:"soy la segunda",
+					resultad:data
+				}	
+				console.log(respuesta)	
+				resolve(respuesta)
+		})
+	})
+
+	Promise.race([promesa1,promesa2])
+	.then((data)=>{
+		//console.log(data)
+	})
+	
+})
+
+
+	
+</script>
+</body>
+</html>
+
+https://notepad.pw/7lp88ps
