@@ -1,24 +1,24 @@
-"https://sminnova.com/rest/servicio/yape/usuarios/login"
+"http://192.168.2.46/rest/servicio/yape/usuarios/login"
 usuario
 password
 
-"https://sminnova.com/rest/servicio/yape/amigos/id"
+"http://192.168.2.46/rest/servicio/yape/amigos/id"
 id_usuario
 
-"https://sminnova.com/rest/servicio/yape/amigos/registro"
+"http://192.168.2.46/rest/servicio/yape/amigos/registro"
 nombres
 telefono
 id_usuario
 
 
-"https://sminnova.com/rest/servicio/yape/pago/registro"
+"http://192.168.2.46/rest/servicio/yape/pago/registro"
 nombres
 telefono
 id_usuario
 monto
 
 
-"https://sminnova.com/rest/servicio/yape/pago/historico"
+"http://192.168.2.46/rest/servicio/yape/pago/historico"
 id_usuario
 
 
