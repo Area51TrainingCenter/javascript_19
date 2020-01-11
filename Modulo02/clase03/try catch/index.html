@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	/*try{
+		console.log(hola)
+	}
+	catch(e){
+		console.log(e)
+	}*/
+
+	function obtenerMes (indiceMes){
+ 		var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
+                "Aug","Sep","Oct","Nov","Dec"];
+        //console.log("dentro de la funcion " + months[indiceMes]);
+        if(months[indiceMes]==undefined){
+        	//console.log("no se encontre el mes");
+        	/* throw {
+        	 		estado:-1,
+        	 		mensaje:"No se encontro el mes en el arreglo",
+        	 		sugerencia:"Ingresar un indce como máximo hasta 12"};*/
+
+        	 throw new RangeError("Indice no valido");		
+        }
+        else{
+        	return months[indiceMes];	
+        }
+        
+	}
+
+
+	try{
+		
+		var mes=obtenerMes(100);
+	
+	}
+	catch(e){
+		console.log(e)
+
+	}
+
+
+
+	
+	console.log("Yo no me debo ver involucrado en esto")
+
+
+/*
+	console.log("el mes obtenido es "+mes)
+	
+	if(mes=="Jan"){
+		console.log("Bienvenido Enero")
+	}
+*/
+	
+</script>

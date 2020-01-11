@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+function sumar(terminar){
+	//peticion ajax sin tiempo definido
+	setTimeout(function(){
+		var suma=10+20;
+		terminar();
+	},5000)
+	
+}
+
+sumar(finPeticion); // le estamos pasando una funcion como parametro;
+
+function finPeticion(){
+	alert("la petición termino");
+}
+
+
+
+function imprimir(valor){
+	console.log(valor)
+}
+
+imprimir("hola") //  string
+imprimir(10) // number
+imprimir(sumar) // funcion
+
+consultar el DNI
+consultar Historial credito 
+validar credito 
+
+
+	function pedirDni(callback){
+		xhr
+		xhr.open
+		xhr.send
+		xhr.readystate == 4
+		     //dni 
+
+		     callback(dni,pedirCredito)
+		
+
+	}
+	pedirDni(pedirhistorial)
+
+	function pedirhistorial(dni,callback2){
+		       xhr
+		       xhr.open
+		       xhr.send
+		       xhr.readystate== 4 
+		       // historial de credito
+			     
+	}
+
+	function pedirCredito(){
+		 			 xhr
+			       xhr.open
+			       xhr.send
+			       xhr.readystate== 4 
+			       // credito
+	}
+
+
+consultar el DNI
+consultar Historial credito 
+validar credito 
+
+new Promise((resolve,reject)=>{
+	//consultar dni 
+	resolve
+})
+.then(()=>{
+	new Promise(()=>{
+
+	})
+	.then(
+		()=>{
+			new Promise(()=>{})
+			.then()
+			.catch();
+		})
+	.catch();
+})
+.catch();
+
+</script>

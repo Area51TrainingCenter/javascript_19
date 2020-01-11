@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+var datos=[
+            "jc",
+			"correo",
+			true]
+
+datos.length
+
+//array asociativo
+
+/*var datos=[
+            "nombre"=>"jc",
+			"correo"=>"correo",
+			"estado"=>true]
+
+*/
+
+persona=new Map();
+persona.set("Nombre","JC")
+persona.set("Apellido","RT")
+persona.size;
+
+
+
+persona.get("Nombre")  // obtienes el valor del objeto
+
+//console.log(persona.has("Apellido")) //true o false
+
+
+
+persona2={
+	"nombre":"JC",
+	"apellido":"Rt",
+
+}
+
+for(let item of persona){
+	console.log(item);
+}
+
+
+/*
+persona2.length
+var contador=0
+for(item in persona2){
+	contador++;
+}
+
+contador // cantidad de valores o porpiedades disponibles
+
+*/
+
+
+
+/*
+
+MAP = objeto  // objeto iterable
+{} = objeto
+[] = array // objecto iterable
+
+
+//for of objetos iterables o llamados tambié array*/
+
+
+console.log("creadon SET");
+
+var listado=new Set();
+
+listado.add(10);
+listado.add(5);
+listado.add(true);
+listado.add([1,3]);
+listado.add([1,3]);
+listado.add({status:10});
+listado.add({status:10});
+listado.size // obtienes la cantidad de elementos
+console.log(listado);
+
+console.log(listado.has(10))
+
+console.log("**** imprimiendo valores del set *******")
+
+for (let item of listado.values()){
+	console.log(item)
+}
+
+var id=[12,3,4,5,12,3,34,234,45,456,4,5,3,546,7,45,65,7,3,4,2,3,4,45,2,2,3,1,2,3,13,4];
+var unicos_id=new Set(id);
+console.log(unicos_id);
+
+
+
+var personas=new Set()
+personas.add("Juan")
+personas.add("Luis")
+personas.add("Diego")
+
+var personas_listado=Array.from(personas);
+console.log(personas_listado);
+
+</script>
