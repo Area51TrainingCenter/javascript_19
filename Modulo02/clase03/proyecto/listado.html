@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+	<div id="modal" class="modal">
+		<div class="contenido-modal">
+			<form id="registro-amigo">
+				<div>
+					<input type="text" name="nombres">
+				</div>
+				<div>
+					<input type="text" name="telefono">
+				</div>
+				<button type="button" id="agregar_usuario">Agregar</button>
+				<!--<div>
+					<input type="hidden" name="id_usuario">
+				</div>-->
+				<span id="mensaje-error"></span>
+			</form>
+		</div>
+	</div>
+
+	<div class="contenedor">
+		<div class="header-list bg-blue">
+		
+			<span class="nombres">Nombre completo</span>
+			<span class="usuario">Usuario</span>
+		</div>
+		<div class="ui-listado">
+				<ul id="resultado-lista" class="items-listado">
+					<!--<li><span class="ubicacion bg-blue">1</span><span class="nombres">Juan carlos Ramos</span><span class="telefono">987654321</span></li>-->
+				</ul>
+		</div>
+	
+	<!--<button id="deslogear" type="button">Deslogearme</button>-->
+		</div>
+
+	<span id="btn_agregar" class="agregar">+</span>
+	</div>
+	
+
+	<script src="js/funciones.js"></script>
+	<script src="js/listado.js"></script>
+</body>
+</html>
