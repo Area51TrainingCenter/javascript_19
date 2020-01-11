@@ -16,7 +16,7 @@ btn_login.addEventListener("click",()=>{
 	*/
 
 
-	var url="http://192.168.2.44/rest/servicio/yape/usuarios/login";
+	var url="http://192.168.2.46/rest/servicio/yape/usuarios/login";
 	const parametros={
 		method:"POST",
 		body:dataLogin

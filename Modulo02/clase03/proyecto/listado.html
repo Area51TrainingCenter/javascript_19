@@ -10,16 +10,48 @@
 </head>
 <body>
 
+	 <div id="modal-pago" class="modal">
+		<div class="contenido-modal">
+			<span id="cerrar-modal-pago">Cerrar</span>
+			<h2 class="title-modal">Pagar Amigo</h2>
+			<form id="registro-pago">
+				<div>
+					<label>	Nombres</label>
+					<input type="text" name="nombres" id="pagar-nombres" readonly>
+				</div>
+				<div>
+					<label>	Teléfono</label>
+					<input type="text" name="telefono" id="pagar-telefono" readonly> 
+				</div>
+
+				<div>
+					<label>	Pagar (S/)</label>
+					<input type="text" name="monto" id="pagar-monto">
+				</div>
+				<button type="button" class="bg-blue" id="pagar_usuario">Pagar</button>
+
+				<!--<div>
+					<input type="hidden" name="id_usuario">
+				</div>-->
+				<span id="mensaje-error"></span>
+			</form>
+		</div>
+	</div>
+
 	<div id="modal" class="modal">
 		<div class="contenido-modal">
+			<span id="cerrar-modal">Cerrar</span>
+			<h2 class="title-modal">Agregar Amigo</h2>
 			<form id="registro-amigo">
 				<div>
+					<label>	Nombres</label>
 					<input type="text" name="nombres">
 				</div>
 				<div>
+					<label>	Teléfono</label>
 					<input type="text" name="telefono">
 				</div>
-				<button type="button" id="agregar_usuario">Agregar</button>
+				<button type="button" class="bg-blue" id="agregar_usuario">Agregar</button>
 				<!--<div>
 					<input type="hidden" name="id_usuario">
 				</div>-->
@@ -30,7 +62,7 @@
 
 	<div class="contenedor">
 		<div class="header-list bg-blue">
-		
+				<span id="historico" class="historico-pagos">Ver historico de pagos</span>
 			<span class="nombres">Nombre completo</span>
 			<span class="usuario">Usuario</span>
 		</div>

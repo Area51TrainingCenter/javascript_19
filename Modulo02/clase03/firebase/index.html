@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDWADF-bm5oSP5IJ9VwzgFXNClN_F5kS38",
+    authDomain: "js19-37ad2.firebaseapp.com",
+    databaseURL: "https://js19-37ad2.firebaseio.com",
+    projectId: "js19-37ad2",
+    storageBucket: "js19-37ad2.appspot.com",
+    messagingSenderId: "171955636418",
+    appId: "1:171955636418:web:3aa4e04d3dc1984ae5135b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script type="text/javascript">
+	
+		let obj_amigo={
+				nombre:"Diego",
+				telefono:"958731223",
+				
+		}
+
+	
+	firebase.database().ref("comentarios").push(obj_amigo);
+
+
+
+var comentariosReferencia=firebase.database().ref("comentarios");
+
+comentariosReferencia.on("value",function(data){
+	//console.log(data.val());
+	var resultados=data.val();
+	var ind=0;
+	for(let item in data.val()){
+		//if(ind==0){
+				console.log(resultados[item].nombre);
+		//}
+			
+		
+		ind++;
+		}
+
+	
+})
+
+</script>
+
+</html>

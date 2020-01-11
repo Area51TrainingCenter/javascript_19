@@ -89,7 +89,7 @@ cursor: pointer;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	
+		position: relative;	
 }
 
 
@@ -171,9 +171,63 @@ z-index: 1000;
 }
 
 .contenido-modal{
+		position: relative;
 	width: 400px;
 	margin:20px auto;
 	border-radius: 10px;
 	padding: 20px;
 	background-color: white;
+}
+
+#registro-amigo div , #registro-pago div{
+	margin-bottom: 20px;
+}
+#registro-amigo div label , #registro-pago div label{
+	font-size: 14px;
+	color: #7c7c7c;
+}
+#registro-amigo div input, #registro-pago div input{
+	width: 100%;
+	padding: 10px;
+	outline:none;
+	border:0;
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+
+}
+
+#agregar_usuario , #pagar_usuario{
+	display: block;
+	width: 90%;
+	margin-left: 5%;
+	padding: 10px 20px;
+
+		color: white;
+		font-weight: bold;
+		border:0;
+		outline: none;
+}
+
+.title-modal{
+		text-align: center;
+		color: #7c7c7c;
+}		
+#cerrar-modal , #cerrar-modal-pago{
+	z-index: 100;
+	color: white;
+	font-size: 13px;
+	background-color: black;
+	padding: 8px 10px;
+	border-radius: 10px;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+}
+
+.historico-pagos{
+	background-color: white;
+	color: black;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding:10px 20px;
 }
